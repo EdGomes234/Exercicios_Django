@@ -1,5 +1,7 @@
 from django.db import models
 
+#EDGAR GOMES OLIVEIRA
+
 # Create your models here.
 class Medico(models.Model):
     nome = models.CharField(max_length=100)

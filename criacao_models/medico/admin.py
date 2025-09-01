@@ -2,6 +2,9 @@ from django.contrib import admin
 from .models import Medico, Especialidade
 # Register your models here.
 
+# EDGAR GOMES OLIVEIRA
+
+
 class MedicoAdmin(admin.ModelAdmin):
     fields = [
         "nome",

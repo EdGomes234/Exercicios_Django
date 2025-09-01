@@ -1,0 +1,22 @@
+{% extends 'medico/base.html'%}
+
+{% block content%}
+    {% for medico in medicos %}
+    
+        <div class="medico_list">
+                <div>
+                    <h1>{{ medico.nome }}</h1>
+                    <h3>Endereço: {{ medico.endereco }}</h3>
+                    <h3>Telefone: {{ medico.telefone }}</h3>
+                    <h3>Email: {{ medico.email }}</h3>
+                    <h3>Data de Nascimento: {{ medico.data_nascimento }}</h3>
+                    <h3>CRM: {{ medico.crm }}</h3>
+                    <h3>Especialidade: {{ medico.especialidade }}</h3>
+                </div>
+                
+                <div class= 'btn' href = "delete/{{medico.id}}">Deletar</div>
+                <div class= 'btn' href = "edit/{{medico.id}}">Editar</div>
+        </div>
+
+    {% endfor %}
+{% endblock content%}

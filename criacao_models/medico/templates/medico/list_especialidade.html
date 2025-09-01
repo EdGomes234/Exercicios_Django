@@ -1,0 +1,17 @@
+{% extends 'medico/base.html'%}
+
+{% block content%}
+    {% for especialidade in especialidades %}
+    
+        <div class="medico_list">
+                <div>
+                    <h3>{{ especialidade.nome }}</h3>
+                    <p>Descrição: {{ especialidade.descricao }}</p> 
+                </div>
+                
+
+                <div class= 'btn'>Deletar</div>
+                <div class= 'btn'>Editar</div>
+        </div>
+    {% endfor %}
+{% endblock content%}

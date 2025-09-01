@@ -1,0 +1,30 @@
+{% extends 'medico/base.html' %}
+{% load static %}
+
+{% block content %}
+
+      <div class="container-add">
+        		
+          <form class="form" action="/add_especialiadade" method="POST" role="form">
+            
+              {% csrf_token %}
+              {{ form.as_p }}
+              
+              <div class="form-group">
+                  <label class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="name" name="nome" placeholder="Nome" tabindex="1" required>
+              </div>
+              <div class="form-group">
+                  <label class="form-label">Descrição</label>
+                  <input type="text" class="form-control" id="name" name="descricao" placeholder="Descrição" tabindex="1" required>
+              </div>
+              
+              <div class="text-center">
+                  <button type="submit" class="btn">Confirmar</button>
+              </div>
+          </form>
+          
+      </div>
+  </div>
+
+{% endblock content %}
