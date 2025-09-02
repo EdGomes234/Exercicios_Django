@@ -7,6 +7,6 @@ class AddForm(forms.Form):
         model = Medico
         fields = ('nome', 'endereco', 'telefone','email', 'data_nascimento','crm','id_especialidade')
 
-    class Meta2:
+    class Meta:
         model = Especialidade
         fields = ('nome','descricao')

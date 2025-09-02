@@ -5,18 +5,18 @@
 
       <div class="container-add">
         		
-          <form id="add_medico" class="form" action="/add_medico" method="POST" role="form">
+          <form id="add_medico" class="form" action="/medico/add_medico" method="POST" role="form">
             
               {% csrf_token %}
               {{ form.as_p }}
               
               <div class="form-group">
                   <label class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Nome" tabindex="1" required>
+                  <input type="text" class="form-control" id="name" name="nome" placeholder="Nome" tabindex="1" required>
               </div>
               <div class="form-group">
                   <label class="form-label">Endereço</label>
-                  <input type="text" class="form-control" id="relation" name="endereço" placeholder="Endereço" tabindex="2" required>
+                  <input type="text" class="form-control" id="relation" name="endereco" placeholder="Endereço" tabindex="2" required>
               </div>
               <div class="form-group">
                   <label class="form-label">Telefone</label>
@@ -35,8 +35,17 @@
                   <input type="text" class="form-control" id="email" name="crm" placeholder="CRM" tabindex="4" required>
               </div>      
               <div class="form-group">
-                  <label class="form-label" for="email">Especialidade</label>
-                  <input type="text" class="form-control" id="email" name="id_especialidade" placeholder="Especialidade" tabindex="4" required>
+                    
+                    <h3>Especialidades</h3>
+                    <select name="id_especialidade" id="id_especialidade">
+
+                        {% for i in especialidades%}
+                        <option value={{i.id}}>{{i.nome}}</option>
+                        {% endfor%}
+
+                    </select>
+              </div>                                  
+
               </div>                                  
               
               <div class="text-center">
